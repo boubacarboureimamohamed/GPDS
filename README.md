@@ -2,7 +2,10 @@
 
 Résumé du projet : 
 
-Le projet a pour but de mettre en pratique l’ensemble des compétences confirmées ou développées au cours de l’activité IFT723. Le déroulement du travail s’inspire du cycle de vie typique de l’élaboration d’une base de données bitemporalisée (BDT). Il commence par la conception initiale d’une base de données non temporalisée (BD) d’envergure moyenne, de son interface programmatique (API), puis de sa transformation en BDT incluant une adaptation de l’API au contexte bitemporel.
+Le projet a pour but de mettre en pratique l’ensemble des compétences confirmées ou développées au cours de l’activité IFT723. Le déroulement du travail s’inspire du cycle de vie typique de l’élaboration d’une base de données bitemporalisée (BDT). Il commence par la conception initiale d’une base de données non temporalisée (BD) d’envergure moyenne, de son interface programmatique (API), puis de sa transformation en BDT incluant une adaptation de l’API au contexte bitemporel. 
+◊ J1 : conception de la BD et de son API.
+◊ J2 : modélisation et conception de la BDT (incluant les contraintes).
+◊ J3 : modélisation conception et mise à l’essai de de l’API de la BDT
 
 Réalisation du projet :
 

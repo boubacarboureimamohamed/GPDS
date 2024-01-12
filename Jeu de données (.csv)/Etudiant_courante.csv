@@ -1,0 +1,20 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26380\viewh16500\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 matricule,matricule_since,prenom,nom,nom_prenom_since,courriel,telephone,contact_since,adresseID,adresseID_since\
+1000111001,NOW(),John,Doe,NOW(),john.doe@email.com,1234567890,NOW(),2,NOW()\
+1000111002,NOW(),Alice,Smith,NOW(),alice.smith@email.com,9876543210,NOW(),3,NOW()\
+1000111003,NOW(),Bob,Johnson,NOW(),bob.johnson@email.com,5556667777,NOW(),4,NOW()\
+1000111004,NOW(),Eva,Brown,NOW(),eva.brown@email.com,3332221111,NOW(),5,NOW()\
+1000111005,NOW(),Michael,White,NOW(),michael.white@email.com,1112233444,NOW(),6,NOW()\
+1000111006,NOW(),Sophia,Miller,NOW(),sophia.miller@email.com,9998887777,NOW(),7,NOW()\
+1000111007,NOW(),Daniel,Davis,NOW(),daniel.davis@email.com,6667778888,NOW(),8,NOW()\
+1000111008,NOW(),Olivia,Moore,NOW(),olivia.moore@email.com,4445556666,NOW(),9,NOW()\
+1000111009,NOW(),Liam,Johnson,NOW(),liam.johnson@email.com,2223334444,NOW(),10,NOW()\
+1000111010,NOW(),Emma,Taylor,NOW(),emma.taylor@email.com,7778889999,NOW(),2,NOW()}

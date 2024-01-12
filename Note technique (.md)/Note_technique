@@ -1,0 +1,569 @@
+
+### Note Technique recensant l’ensemble des scripts et présentant leur utilisation typique dans le cadre des tests
+
+--------------------------------------------
+## Script (`IFT723_trig_etu.sql`)
+
+### 1. Trigger pour la Table `Etudiant_Courante`
+
+- Description : Le trigger `Etudiant_courante_sauvegarde_Log_Trigger` capture les opérations d'insertion, de mise à jour et de suppression sur la table `Etudiant_Courante`. Il enregistre les changements dans la table de log `Etudiant_Courante_Log`.
+
+### 2. Trigger pour la Table `Etudiant_Matricule_Validite`
+
+- Description : Le trigger `Etudiant_matricule_validite_sauvegarde_Log_Trigger` capture les opérations d'insertion, de mise à jour et de suppression sur la table `Etudiant_Matricule_Validite`. Il enregistre les changements dans la table de log `Etudiant_Matricule_Log`.
+
+### 3. Trigger pour la Table `Etudiant_Nom_Prenom_Validite`
+
+- Description : Le trigger `Etudiant_nom_prenom_validite_sauvegarde_Log_Trigger` capture les opérations d'insertion, de mise à jour et de suppression sur la table `Etudiant_Nom_Prenom_Validite`. Il enregistre les changements dans la table de log `Etudiant_Nom_Prenom_Log`.
+
+### 4. Trigger pour la Table `Etudiant_Contact_Validite`
+
+- Description : Le trigger `Etudiant_contact_validite_sauvegarde_Log_Trigger` capture les opérations d'insertion, de mise à jour et de suppression sur la table `Etudiant_Contact_Validite`. Il enregistre les changements dans la table de log `Etudiant_Contact_Log`.
+
+### 5. Trigger pour la Table `Etudiant_AdresseID_Validite`
+
+- Description : Le trigger `Etudiant_adresseID_validite_sauvegarde_Log_Trigger` capture les opérations d'insertion, de mise à jour et de suppression sur la table `Etudiant_AdresseID_Validite`. Il enregistre les changements dans la table de log `Etudiant_AdresseID_Log`.
+
+## Utilisation Typique et Scénarios de Test
+
+1. Ajout d'un Nouvel Étudiant :
+   - Script : Effectuez une opération d'insertion sur la table `Etudiant_Courante`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Courante_Log` avec les informations appropriées.
+
+2. Modification d'un Étudiant Existants :
+   - Script : Effectuez une opération de mise à jour sur la table `Etudiant_Courante`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Etudiant_Courante_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+3. Retrait d'un Étudiant :
+   - Script : Effectuez une opération de suppression sur la table `Etudiant_Courante`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Etudiant_Courante_Log` est correctement fermée.
+
+4. Ajout d'un Nouveau Matricule :
+   - Script : Effectuez une opération d'insertion sur la table `Etudiant_Matricule_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Matricule_Log` avec les informations appropriées.
+
+5. Modification d'un Matricule Existants :
+   - Script : Effectuez une opération de mise à jour sur la table `Etudiant_Matricule_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Etudiant_Matricule_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+6. Retrait d'un Matricule :
+   - Script : Effectuez une opération de suppression sur la table `Etudiant_Matricule_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Etudiant_Matricule_Log` est correctement fermée.
+
+7. Ajout d'un Nouveau Nom/Prenom :
+   - Script : Effectuez une opération d'insertion sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Nom_Prenom_Log` avec les informations appropriées.
+
+8. Modification d'un Nom/Prenom Existants :
+   - Script : Effectuez une opération de mise à jour sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Etudiant_Nom_Prenom_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+9. Retrait d'un Nom/Prenom :
+   - Script : Effectuez une opération de suppression sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Etudiant_Nom_Prenom_Log` est correctement fermée.
+
+10. Ajout d'un Nouveau Contact :
+   - Script : Effectuez une opération d'insertion sur la table `Etudiant_Contact_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Contact_Log` avec les informations appropriées.
+
+11. Modification d'un Contact Existants :
+   - Script : Effectuez une opération de mise à jour sur la table `Etudiant_Contact_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Etudiant_Contact_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+12. Retrait d'un Contact :
+   - Script : Effectuez une opération de suppression sur la table `Etudiant_Contact_Validite`.
+   - Vér
+
+ification : Assurez-vous que la ligne correspondante dans la table de log `Etudiant_Contact_Log` est correctement fermée.
+
+13. Ajout d'une Nouvelle AdresseID :
+   - Script : Effectuez une opération d'insertion sur la table `Etudiant_AdresseID_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_AdresseID_Log` avec les informations appropriées.
+
+14. Modification d'une AdresseID Existante :
+   - Script : Effectuez une opération de mise à jour sur la table `Etudiant_AdresseID_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Etudiant_AdresseID_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+15. Retrait d'une AdresseID :
+   - Script : Effectuez une opération de suppression sur la table `Etudiant_AdresseID_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Etudiant_AdresseID_Log` est correctement fermée.
+
+---------------------------------------------
+
+## Script (`IFT723_func_etu.sql`)
+
+## Scénarios de Test
+
+### 1. Agrégation des Plages Temporelles
+#### Objectif du Test
+
+Vérifier si la fonction `f_range_agg` agrège correctement les plages temporelles d'une colonne spécifiée dans une table.
+
+#### Procédure de Test
+
+1. Créer une table factice avec des plages temporelles.
+2. Utiliser la fonction `f_range_agg` pour agréger les plages temporelles.
+3. Vérifier la sortie de la fonction pour s'assurer de la compacité des plages.
+
+### 2. Ajout d'un Nouvel Étudiant
+#### Objectif du Test
+
+S'assurer que la procédure `etudiant_courante_ajout_at` ajoute correctement un nouvel étudiant à la table courante avec la date d'ajout spécifiée.
+
+#### Procédure de Test
+
+1. Ajouter un étudiant avec des données factices en utilisant `etudiant_courante_ajout_at`.
+2. Vérifier la présence de l'étudiant dans la table courante avec les informations correctes.
+3. Vérifier également la présence correspondante dans les tables de validité.
+
+### 3. Modification des Informations Étudiantes
+#### Objectif du Test
+
+Tester les procédures de modification (`etudiant_courante_modifier_*_at`) pour garantir la cohérence des données lors de la modification des informations étudiantes.
+
+#### Procédure de Test
+
+1. Ajouter un étudiant avec des données factices.
+2. Utiliser les procédures de modification pour changer certaines informations.
+3. Vérifier que les modifications sont correctement reflétées dans la table courante et les tables de validité.
+
+### 4. Retrait d'un Étudiant
+#### Objectif du Test
+
+Vérifier si la procédure `etudiant_courante_retrait_at` retire correctement un étudiant de la table courante avec la date de retrait spécifiée.
+
+#### Procédure de Test
+
+1. Ajouter un étudiant avec des données factices.
+2. Utiliser la procédure de retrait pour retirer l'étudiant avec une date de retrait spécifiée.
+3. Vérifier l'absence de l'étudiant dans la table courante et sa présence dans les tables de validité.
+
+---------------------------------------------
+
+## Script (`IFT723_cre_etu.sql`)
+
+## Utilisation Typique des Tables
+
+1. `Etudiant_Courante`
+   - Description : Contient les informations actuelles sur les étudiants.
+   - Utilisation Typique : Utilisée pour stocker les données courantes des étudiants.
+
+2. `Etudiant_Courante_Log`
+   - Description : Table de log pour les modifications de la table `Etudiant_Courante`.
+   - Utilisation Typique : Stocke les versions antérieures des données de `Etudiant_Courante` avec les informations de transaction.
+
+3. `Etudiant_Matricule_Validite`
+   - Description : Contient les périodes de validité des matricules des étudiants.
+   - Utilisation Typique : Utilisée pour stocker les périodes de validité des matricules.
+
+4. `Etudiant_Matricule_Log`
+   - Description : Table de log pour les modifications de la table `Etudiant_Matricule_Validite`.
+   - Utilisation Typique : Stocke les versions antérieures des données de `Etudiant_Matricule_Validite` avec les informations de transaction.
+
+5. `Etudiant_Nom_Prenom_Validite`
+   - Description : Contient les périodes de validité des noms et prénoms des étudiants.
+   - Utilisation Typique : Utilisée pour stocker les périodes de validité des noms et prénoms.
+
+6. `Etudiant_Nom_Prenom_Log`
+   - Description : Table de log pour les modifications de la table `Etudiant_Nom_Prenom_Validite`.
+   - Utilisation Typique : Stocke les versions antérieures des données de `Etudiant_Nom_Prenom_Validite` avec les informations de transaction.
+
+7. `Etudiant_Contact_Validite`
+   - Description : Contient les périodes de validité des contacts (courriel, téléphone) des étudiants.
+   - Utilisation Typique : Utilisée pour stocker les périodes de validité des contacts.
+
+8. `Etudiant_Contact_Log`
+   - Description : Table de log pour les modifications de la table `Etudiant_Contact_Validite`.
+   - Utilisation Typique : Stocke les versions antérieures des données de `Etudiant_Contact_Validite` avec les informations de transaction.
+
+9. `Etudiant_AdresseID_Validite`
+   - Description : Contient les périodes de validité des adresses ID des étudiants.
+   - Utilisation Typique : Utilisée pour stocker les périodes de validité des adresses ID.
+
+10. `Etudiant_AdresseID_Log`
+    - Description : Table de log pour les modifications de la table `Etudiant_AdresseID_Validite`.
+    - Utilisation Typique : Stocke les versions antérieures des données de `Etudiant_AdresseID_Validite` avec les informations de transaction.
+
+## Scénarios de Test
+
+1. Ajout d'un Nouvel Étudiant :
+   - Étapes :
+     - Effectuer une opération d'insertion sur la table `Etudiant_Courante`.
+   - Vérification :
+     - Assurer qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Courante_Log` avec les informations appropriées.
+
+2. Modification d'un Étudiant Existants :
+   - Étapes :
+     - Effectuer une opération de mise à jour sur la table `Etudiant_Courante`.
+   - Vérification :
+     - Vérifier que la ligne correspondante dans la table de log `Etudiant_Courante_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+3. Retrait d'un Étudiant :
+   - Étapes :
+     - Effectuer une opération de suppression sur la table `Etudiant_Courante`.
+   - Vérification :
+     - Assurer que la ligne correspondante dans la table de log `Etudiant_Courante_Log` est correctement fermée.
+
+4. Ajout d'un Nouveau Matricule :
+   - Étapes :
+     - Effectuer une opération d'insertion sur la table `Etudiant_Matricule_Validite`.
+   - Vérification :
+     - Assurer qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Matricule_Log` avec les informations appropriées.
+
+5. Modification d'un Matricule Existants :
+   - Étapes :
+     - Effectuer une opération de mise à jour sur la table `Etudiant_Matricule_Validite`.
+   - Vérification :
+     - Vérifier que la ligne correspondante dans la table de log `Etudiant_Matricule_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+6. Retrait d'un Matricule :
+   - Étapes :
+     - Effectuer une opération de suppression sur la table `Etudiant_Matricule_Validite`.
+   - Vérification :
+     - Assurer que la ligne correspondante dans la table de log `Etudiant_Matricule_Log` est correctement fermée.
+
+7. Ajout d'un Nouveau Nom/Prenom :
+   - Étapes :
+     - Effectuer une opération d'insertion sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification :
+     - Assurer qu'une nouvelle ligne est ajoutée à la table de log `Etudiant_Nom_Prenom_Log` avec les informations appropriées.
+
+8. Modification d'un Nom/Prenom Existants :
+   - Étapes :
+     - Effectuer une opération de mise à jour sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification :
+     - Vérifier que la ligne correspondante dans la table de log `Etudiant_Nom_Prenom_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+9. Retrait d'un Nom/Prenom :
+   - Étapes :
+     - Effectuer une opération de suppression sur la table `Etudiant_Nom_Prenom_Validite`.
+   - Vérification :
+     - Assurer que la ligne correspondante dans la table de log `Etudiant_Nom_Prenom_Log`
+
+---------------------------------------------
+
+## Script (`IFT723_trig_adr.sql`)
+
+## Triggers SQL
+
+### 1. Trigger de la Table `Adresse_Courante`
+
+- Description : Le trigger `Adresse_courante_sauvegarde_Log_Trigger` enregistre les opérations sur la table `Adresse_Courante` dans la table de log `Adresse_Courante_Log`.
+- Utilisation Typique : Ce trigger est activé avant chaque opération d'insertion, de mise à jour ou de suppression sur la table `Adresse_Courante`.
+
+### 2. Trigger de la Table `Adresse_Code_Validite`
+
+- Description : Le trigger `Adresse_code_validite_sauvegarde_Log_Trigger` enregistre les opérations sur la table `Adresse_Code_Validite` dans la table de log `Adresse_Code_Log`.
+- Utilisation Typique : Ce trigger est activé avant chaque opération d'insertion, de mise à jour ou de suppression sur la table `Adresse_Code_Validite`.
+
+### 3. Trigger de la Table `Adresse_Rue_Ville_Region_Pays_Validite`
+
+- Description : Le trigger `Adresse_rue_ville_region_pays_validite_sauvegarde_Log_Trigger` enregistre les opérations sur la table `Adresse_Rue_Ville_Region_Pays_Validite` dans la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log`.
+- Utilisation Typique : Ce trigger est activé avant chaque opération d'insertion, de mise à jour ou de suppression sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+
+## Scénarios de Test
+
+1. Ajout d'une Nouvelle Adresse Courante :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Courante`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Courante_Log` avec les informations appropriées.
+
+2. Modification d'une Adresse Courante :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Courante`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Courante_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+3. Retrait d'une Adresse Courante :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Courante`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Courante_Log` est correctement fermée.
+
+4. Ajout d'une Nouvelle Adresse Code/Validité :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Code_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Code_Log` avec les informations appropriées.
+
+5. Modification d'une Adresse Code/Validité :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Code_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Code_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+6. Retrait d'une Adresse Code/Validité :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Code_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Code_Log` est correctement fermée.
+
+7. Ajout d'une Nouvelle Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` avec les informations appropriées.
+
+8. Modification d'une Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+9. Retrait d'une Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` est correctement fermée.
+
+---------------------------------------------
+
+## Script (`IFT723_func_adr.sql`)
+
+## Fonctions SQL
+
+### 1. Fonction de Regroupement de Plages Temporelles
+
+- Description : La fonction `f_range_agg` permet de regrouper des plages temporelles séparées en une seule plage temporelle maximale et compacte.
+- Utilisation Typique : Cette fonction peut être utilisée pour assurer la compacité des tables temporaires, optimisant ainsi l'espace de stockage.
+
+### 2. Procédure d'Ajout d'Adresse dans Toutes les Tables de Validité
+
+- Description : La procédure `adresse_validite_ajout` ajoute une adresse dans toutes les tables de validité (code, nom et prénom) pour assurer la cohérence des informations d'adresse.
+- Utilisation Typique : Lors de l'ajout d'une nouvelle adresse, cette procédure garantit que toutes les tables de validité sont mises à jour simultanément.
+
+### 3. Procédures d'Ajout d'Adresses dans les Tables Courantes et de Validité
+
+- Description : Les procédures `adresse_courante_ajout_at` et `adresse_courante_ajout_now` ajoutent une adresse dans la table courante à un moment précis ou à la date actuelle.
+- Utilisation Typique : Lors de l'ajout d'une nouvelle adresse pour un étudiant, ces procédures garantissent que les informations sont correctement insérées dans la table courante avec la date appropriée.
+
+### 4. Procédures de Modification d'Adresses dans la Table Courante
+
+- Description : Les procédures `adresse_courante_modifier_rue_ville_region_pays_at` et `adresse_courante_modifier_rue_ville_region_pays_now` modifient l'adresse actuelle d'un étudiant à un moment précis ou à la date actuelle.
+- Utilisation Typique : Ces procédures sont utilisées pour mettre à jour les informations d'adresse actuelles d'un étudiant, garantissant que la cohérence des données est maintenue.
+
+### 5. Procédures de Retrait d'Adresses de la Table Courante
+
+- Description : Les procédures `adresse_courante_retrait_at` et `adresse_courante_retrait_now` retirent une adresse de la table courante à un moment précis ou à la date actuelle.
+- Utilisation Typique : Ces procédures permettent de retirer une adresse actuelle d'un étudiant, mettant à jour simultanément les tables de validité avec les informations retirées.
+
+## Scénarios de Test
+
+1. Ajout d'une Nouvelle Adresse :
+   - Script : Utilisation de la procédure `adresse_validite_ajout` pour ajouter une nouvelle adresse avec toutes les informations associées.
+   - Vérification : Assurez-vous que l'adresse est correctement ajoutée dans toutes les tables de validité.
+
+2. Ajout d'une Adresse Courante à un Moment Précis :
+   - Script : Utilisation de `adresse_courante_ajout_at` pour ajouter une nouvelle adresse à un moment précis.
+   - Vérification : Vérifiez que l'adresse est correctement ajoutée dans la table courante avec la date spécifiée.
+
+3. Modification d'une Adresse Courante à un Moment Précis :
+   - Script : Utilisation de `adresse_courante_modifier_rue_ville_region_pays_at` pour modifier une adresse à un moment précis.
+   - Vérification : Vérifiez que les informations d'adresse sont correctement mises à jour dans la table courante.
+
+4. Retrait d'une Adresse Courante à un Moment Précis :
+   - Script : Utilisation de `adresse_courante_retrait_at` pour retirer une adresse à un moment précis.
+   - Vérification : Assurez-vous que l'adresse est retirée de la table courante et ajoutée aux tables de validité appropriées.
+
+5. Ajout d'une Adresse Courante Maintenant :
+   - Script : Utilisation de `adresse_courante_ajout_now` pour ajouter une nouvelle adresse avec la date actuelle.
+   - Vérification : Vérifiez que l'adresse est correctement ajoutée dans la table courante avec la date actuelle.
+
+6. Modification d'une Adresse Courante Maintenant :
+   - Script : Utilisation de `adresse_courante_modifier_rue_ville_region_pays_now` pour modifier une adresse avec la date actuelle.
+   - Vérification : Vérifiez que les informations d'adresse sont correctement mises à jour dans la table courante.
+
+7. Retrait d'une Adresse Courante Maintenant :
+   - Script : Utilisation de `adresse_courante_retrait_now` pour retirer une adresse avec la date actuelle.
+   - Vérification : Assurez-vous que l'adresse est retirée de la table courante et ajoutée aux tables de validité appropriées.
+
+---------------------------------------------
+
+## Script (`IFT723_cre_adr.sql`)
+
+### 1. Création du Schéma et des Extensions
+
+- Description : Le script commence par la création du schéma "IFT723" s'il n'existe pas déjà. Ensuite, il ajoute l'extension "btree_gist" à la base de données.
+
+### 2. Définition des Domaines et Types
+
+- Description : Les domaines tels que `Adresse_Code`, `Adresse_Rue`, `Adresse_Appartement`, etc., sont définis pour spécifier les contraintes sur les données stockées dans les colonnes correspondantes des tables.
+
+### 3. Création de la Table `Adresse_Courante`
+
+- Description : La table `Adresse_Courante` stocke les informations de base sur une adresse courante, avec des colonnes telles que le code, l'appartement, la rue, la ville, la région, le code postal, le pays, etc.
+
+### 4. Création de la Table `Adresse_Courante_Log`
+
+- Description : La table `Adresse_Courante_Log` est une table de logs associée à la table `Adresse_Courante`. Elle enregistre les changements apportés à chaque adresse courante, y compris les informations temporelles.
+
+### 5. Création de la Table `Adresse_Code_Validite`
+
+- Description : La table `Adresse_Code_Validite` stocke les codes d'adresse et leurs plages de validité temporelle.
+
+### 6. Création de la Table `Adresse_Code_Log`
+
+- Description : La table `Adresse_Code_Log` est une table de logs associée à la table `Adresse_Code_Validite`. Elle enregistre les changements apportés aux codes d'adresse et à leur validité temporelle.
+
+### 7. Création de la Table `Adresse_Rue_Ville_Region_Pays_Validite`
+
+- Description : La table `Adresse_Rue_Ville_Region_Pays_Validite` stocke les informations sur la rue, la ville, la région, le pays et leur validité temporelle.
+
+### 8. Création de la Table `Adresse_Rue_Ville_Region_Pays_Validite_Log`
+
+- Description : La table `Adresse_Rue_Ville_Region_Pays_Validite_Log` est une table de logs associée à la table `Adresse_Rue_Ville_Region_Pays_Validite`. Elle enregistre les changements apportés aux informations sur la rue, la ville, la région, le pays et à leur validité temporelle.
+
+### 9. Contraintes d'Intégrité et Index
+
+- Description : Le script ajoute des contraintes d'exclusion GIST pour garantir l'intégrité des données et crée des index pour optimiser les performances des requêtes.
+
+## Utilisation Typique et Scénarios de Test
+
+1. Ajout d'une Nouvelle Adresse Courante :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Courante`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Courante_Log` avec les informations appropriées.
+
+2. Modification d'une Adresse Courante :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Courante`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Courante_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+3. Retrait d'une Adresse Courante :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Courante`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Courante_Log` est correctement fermée.
+
+4. Ajout d'une Nouvelle Adresse Code/Validité :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Code_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Code_Log` avec les informations appropriées.
+
+5. Modification d'une Adresse Code/Validité :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Code_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Code_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+6. Retrait d'une Adresse Code/Validité :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Code_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Code_Log` est correctement fermée.
+
+7. Ajout d'une Nouvelle Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération d'insertion sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Assurez-vous qu'une nouvelle ligne est ajoutée à la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` avec les informations appropriées.
+
+8. Modification d'une Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération de mise à jour sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Vérifiez que la ligne correspondante dans la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` est correctement fermée, et une nouvelle ligne est ajoutée avec les informations mises à jour.
+
+9. Retrait d'une Adresse Rue/Ville/Région/Pays/Validité :
+   - Script : Effectuez une opération de suppression sur la table `Adresse_Rue_Ville_Region_Pays_Validite`.
+   - Vérification : Assurez-vous que la ligne correspondante dans la table de log `Adresse_Rue_Ville_Region_Pays_Validite_Log` est correctement fermée.
+
+---------------------------------------------
+
+#### 1. Script de Retrait des Données (`IFT723_del.sql`)
+
+Le script `IFT723_del.sql` a pour objectif de retirer les données des tables du schéma IFT723. Voici une analyse détaillée :
+
+- Localisation du Schéma :
+  - Le script commence par définir le schéma actif comme étant "IFT723" avec l'instruction `set schema 'IFT723';`.
+    Cela assure que les opérations de suppression des données s'appliqueront aux tables de ce schéma.
+
+- Vidage des Tables :
+  - Les instructions `DELETE FROM Adresse;` et `DELETE FROM Etudiant;` sont utilisées pour vider les données des tables "Adresse" et "Etudiant", 
+    respectivement. Ces commandes suppriment toutes les lignes dans chaque table, réinitialisant ainsi les données à zéro.
+
+
+Le script `IFT723_del.sql` offre une procédure de suppression des données des tables du schéma IFT723. 
+Son exécution entraînera la suppression de toutes les données dans les tables "Adresse" et "Etudiant".
+Ce script est important pour la maintenance et la gestion des données dans la base de données.
+
+---------------------------------------------
+
+#### 1. Script de Destruction des Tables (`IFT723_drop.sql`)
+
+Le script `IFT723_drop.sql` a pour objectif de détruire le schéma IFT723 ainsi que toutes les tables qu'il contient. Voici une analyse détaillée :
+
+- Destruction du Schéma :
+  - L'instruction `DROP SCHEMA IF EXISTS "IFT723" CASCADE;` est utilisée pour détruire le schéma IFT723. 
+    L'option `CASCADE` permet de supprimer toutes les tables et objets dépendants du schéma.
+
+
+Le script `IFT723_drop.sql` offre une procédure de destruction complète du schéma IFT723, éliminant ainsi toutes les tables et objets associés. 
+Son exécution doit être effectuée avec prudence, car elle entraînera la perte permanente de toutes les données contenues dans ce schéma. 
+Ce script est particulièrement utile lorsqu'une réinitialisation complète de la base de données est nécessaire.
+
+---------------------------------------------
+
+#### 1. Script d'Insertion des Données (`IFT723_ins.sql`)
+
+Le script `IFT723_ins-val.sql` a pour objectif d'insérer des données de test dans les tables du schéma IFT723. Voici une analyse détaillée :
+
+- Localisation du Schéma :
+  - Le script commence par définir le schéma actif comme étant "IFT723" avec l'instruction `set schema 'IFT723';`. 
+    Cela garantit que les opérations d'insertion des données s'appliqueront aux tables de ce schéma.
+
+- Insertion des Données dans la Table Adresse_Since_VS :
+  - Des valeurs de test sont insérées dans la table "Adresse_Since_VS" avec des informations telles que le code, les dates de début (`_since`), 
+    l'appartement, la rue, la ville, la région, le code postal et le pays.
+
+- Insertion des Données dans la Table Etudiant_Since_VS :
+  - Des valeurs de test sont insérées dans la table "Etudiant_Since_VS" avec des informations telles que le matricule, 
+    les dates de début (`_since`), le nom complet, le courriel, le téléphone, et les clés étrangères vers la table "Adresse_Since_VS".
+
+
+Le script `IFT723_ins-val.sql` facilite l'insertion de données de test dans les tables du schéma IFT723, 
+permettant ainsi de vérifier le bon fonctionnement de la base de données dans des conditions simulées. 
+Les contributeurs ont adapté et complété le script pour répondre aux besoins spécifiques du problème IFT723.
+
+---------------------------------------------
+
+# Note Technique - Scripts ÉMIR Etudiant (`IFT723_API.sql`)
+
+Les noms des routines suivent une convention particulière dans le contexte du système ÉMIR. 
+Voici une explication détaillée des suffixes utilisés dans les noms des routines liées à la gestion des étudiants :
+
+1. ### Modification (etudiant_mod_gen_sst_exs)
+   - `etudiant`: Indique que la routine concerne les opérations liées aux étudiants.
+   - `mod`: Indique qu'il s'agit d'une routine de modification, c'est-à-dire qu'elle est utilisée pour mettre à jour les informations d'un étudiant.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard de modification.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer une modification sans retour de statut.
+   - `exs`: Représente des exigences strictes, indiquant que la routine suit des exigences strictes lors de la modification.
+
+2. ### Évaluation (etudiant_eva_gen)
+   - `etudiant`: Indique que la routine concerne les opérations liées aux étudiants.
+   - `eva`: Indique qu'il s'agit d'une routine d'évaluation, c'est-à-dire qu'elle est utilisée pour obtenir des informations sur un étudiant.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard d'évaluation.
+
+3. ### Insertion (etudiant_ins_gen_sst_exs)
+   - `etudiant`: Indique que la routine concerne les opérations liées aux étudiants.
+   - `ins`: Indique qu'il s'agit d'une routine d'insertion, c'est-à-dire qu'elle est utilisée pour ajouter un nouvel étudiant.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard d'insertion.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer une insertion sans retour de statut.
+   - `exs`: Représente des exigences strictes, indiquant que la routine suit des exigences strictes lors de l'insertion.
+
+4. ### Retrait (etudiant_ret_gen_sst)
+   - `etudiant`: Indique que la routine concerne les opérations liées aux étudiants.
+   - `ret`: Indique qu'il s'agit d'une routine de retrait, c'est-à-dire qu'elle est utilisée pour supprimer un étudiant.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard de retrait.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer un retrait sans retour de statut.
+
+
+# Note Technique - Scripts ÉMIR Adresse (`IFT723_API.sql`)
+
+1. ### Modification (adresse_mod_gen_sst_exs)
+   - `adresse`: Indique que la routine concerne les opérations liées aux adresses.
+   - `mod`: Indique qu'il s'agit d'une routine de modification, c'est-à-dire qu'elle est utilisée pour mettre à jour les informations d'une adresse.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard de modification.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer une modification sans retour de statut.
+   - `exs`: Représente des exigences strictes, indiquant que la routine suit des exigences strictes lors de la modification.
+
+2. ### Évaluation (adresse_eva_gen)
+   - `adresse`: Indique que la routine concerne les opérations liées aux adresses.
+   - `eva`: Indique qu'il s'agit d'une routine d'évaluation, c'est-à-dire qu'elle est utilisée pour obtenir des informations sur une adresse.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard d'évaluation.
+
+3. ### Insertion (adresse_ins_gen_sst_exs)
+   - `adresse`: Indique que la routine concerne les opérations liées aux adresses.
+   - `ins`: Indique qu'il s'agit d'une routine d'insertion, c'est-à-dire qu'elle est utilisée pour ajouter une nouvelle adresse.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard d'insertion.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer une insertion sans retour de statut.
+   - `exs`: Représente des exigences strictes, indiquant que la routine suit des exigences strictes lors de l'insertion.
+
+4. ### Retrait (adresse_ret_gen_sst)
+   - `adresse`: Indique que la routine concerne les opérations liées aux adresses.
+   - `ret`: Indique qu'il s'agit d'une routine de retrait, c'est-à-dire qu'elle est utilisée pour supprimer une adresse.
+   - `gen`: Représente le cas général, indiquant qu'il s'agit d'une routine standard de retrait.
+   - `sst`: Indique que la routine ne retourne pas de statut (sans statut), elle est utilisée pour effectuer un retrait sans retour de statut.
+
+---------------------------------------------
+
+#### Remarques Générales
+
+- Assurez-vous d'exécuter les scripts dans l'ordre approprié pour éviter les erreurs de dépendance.
+
+- Vérifiez que les contraintes de domaine sont adaptées à vos besoins spécifiques.
+
+- Les tables d'historique sont créées pour permettre le suivi des changements au fil du temps pour certains attributs,
+  comme le matricule, le nom complet, le courriel, le téléphone, et les composants de l'adresse.
+
+- Les scripts sont documentés pour indiquer la date de réalisation et les auteurs (par exemple, "DONE 2023-11-22 (ELBO1901)").

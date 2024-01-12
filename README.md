@@ -1,10 +1,10 @@
 # Gestion des Paiements des Droits de Scolarité
 
-Résumé : 
+Résumé du projet : 
 
 Le projet a pour but de mettre en pratique l’ensemble des compétences confirmées ou développées au cours de l’activité IFT723. Le déroulement du travail s’inspire du cycle de vie typique de l’élaboration d’une base de données bitemporalisée (BDT). Il commence par la conception initiale d’une base de données non temporalisée (BD) d’envergure moyenne, de son interface programmatique (API), puis de sa transformation en BDT incluant une adaptation de l’API au contexte bitemporel.
 
-Réalisation :
+Réalisation du projet :
 
 Le premier jalon de ce projet marque le point de départ de notre parcours vers la création d'une Base de Données et de son API. Il s'agit d'une étape cruciale où nous adaptons, mettons en oeuvre et, le cas échéant, migrons notre base de données initiale. Cette phase initiale requiert une compréhension approfondie des exigences de notre projet.
 
